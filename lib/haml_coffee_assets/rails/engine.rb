@@ -35,7 +35,7 @@ module HamlCoffeeAssets
 
         config.assets.configure do |env|
           if env.respond_to?(:register_transformer)
-            env.register_mime_type 'text/hamlc', extensions: ['.hamlc']
+            env.register_mime_type 'text/hamlc', extensions: ['.hamlc', '.jst.hamlc']
             env.register_transformer 'text/hamlc', 'application/javascript+function', ::HamlCoffeeAssets::Transformer
           end
 
